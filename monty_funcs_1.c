@@ -1,4 +1,5 @@
 #include "monty.h"
+#include "stddef.h"
 
 void monty_push(stack_t **stack, unsigned int line_number);
 void monty_pall(stack_t **stack, unsigned int line_number);
@@ -93,6 +94,7 @@ void monty_pall(stack_t **stack, unsigned int line_number)
  * @stack: A pointer to the top mode node of a stack_t linked list.
  *  @line_number: The current working line number of a Monty bytecodes file.
  */
+
 void monty_pint(stack_t **stack, unsigned int line_number)
 {
 
@@ -102,9 +104,6 @@ void monty_pint(stack_t **stack, unsigned int line_number)
 		set_op_tok_error(pint_error(line_number));
 		return;
 	}
-
-	printf("%d\n", (*stack)->next->n);
-
 }
 
 /**

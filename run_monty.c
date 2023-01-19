@@ -1,5 +1,6 @@
 #include "monty.h"
-#include <string.h>
+#include <stdio.h>
+
 
 void free_tokens(void);
 unsigned int token_arr_len(void);
@@ -117,6 +118,7 @@ void (*get_op_func(char *opcode))(stack_t**, unsigned int)
  *
  * Return: EXIT_SUCCESS on success, respective error code on failure.
  */
+
 int run_monty(FILE *script_fd)
 {
 
@@ -144,7 +146,7 @@ int run_monty(FILE *script_fd)
 			return (malloc_error());
 
 		}
-		else if (op_toks[0][0] == '#') /* comment line */
+		else if (op_toks[0][0] == '#') 
 		{
 			free_tokens();
 			continue;
