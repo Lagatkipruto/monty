@@ -92,7 +92,7 @@ int short_stack_error(unsigned int line_number, char *op);
 int div_error(unsigned int line_number);
 int pchar_error(unsigned int line_number, char *message);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-void monty_pint(stack_t **stack, unsigned int line_number);
+
 
 
 #endif /* __MONTY_H__ */
